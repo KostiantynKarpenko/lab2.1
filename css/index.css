@@ -1,0 +1,106 @@
+html,
+body {
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+li,
+a,
+p,
+tr,
+td {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: 14px;
+  list-style: none;
+  color: #000000;
+  text-decoration: none;
+}
+.title {
+  margin: 50px;
+}
+.title .users {
+  font-size: 50px;
+  font-weight: bold;
+}
+.title .users-number {
+  font-size: 20px;
+}
+.search-field {
+  max-width: 95%;
+  margin: 0 auto;
+}
+.search-field .search-bar {
+  padding: 5px;
+  display: flex;
+  border-radius: 10px;
+  border: 2px solid #c2c2c285;
+  transition: 0.2s;
+}
+.search-field .search-bar.active {
+  border: 2px solid #636363;
+  transition: 0.2s;
+}
+.search-field .search-bar img {
+  width: 30px;
+  padding: 0px 10px;
+}
+.search-field .search-bar input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #000000;
+}
+.search-field .search-bar .clear-search-bar {
+  width: 20px;
+  cursor: pointer;
+}
+.search-field .users-table {
+  margin: 15px 0;
+  width: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 8px 0;
+  border-collapse: collapse;
+}
+.search-field .users-table tr {
+  transition: 0.2s;
+  align-items: center;
+}
+.search-field .users-table tr:hover {
+  background-color: rgba(109, 238, 255, 0.185);
+  transition: 0.2s;
+}
+.search-field .users-table tr td:first-child {
+  width: 400px;
+  padding: 0 10px;
+}
+.search-field .users-table tr a {
+  cursor: pointer;
+  font-size: 25px;
+  display: block;
+  padding: 7px 0;
+}
+.search-field .users-table tr a.url {
+  font-size: 20px;
+}
+.search-field .users-table tr span {
+  font-size: 25px;
+  cursor: default;
+  display: block;
+  padding: 7px 0;
+  user-select: none;
+}
