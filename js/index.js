@@ -14,9 +14,8 @@ function getLS(key) {
     return JSON.parse(localStorage.getItem(key));
 }
 
-if (!!getLS('data')) {
+if(!!getLS('data')) {
     users = getLS('data');
-    console.log(users)
     templateBuilder(users);
 }
 else{
@@ -44,8 +43,8 @@ function templateBuilder(list) {
         template = '<tr><td><span>Not found</span></td></tr>'
     }
     else {
-        list.forEach(element => {
-            template += '<tr><td><a class="name">' + element.name + '</a></td>' + '<td><a class="url">' + element.url + '</a></td></tr>'
+        list.forEach((element, i) => {
+            template += '<tr><td><a class="name">' + element.name + '</a></td>' + '<td><a class="url">' + element.url + '</a></td>' + '<td><button class="delete-element" element-index="' + i + '">Delete</button></td></tr>';
         });
     }
     $listContainer.innerHTML = template;
@@ -61,6 +60,12 @@ window.addEventListener('click', (e) =>{
         let target = e.target.innerText
         $field.value = target;
         filterController(target)
+    }
+    if (e.target.classList.contains('delete-element')) {
+        let index = e.target.getAttribute('element-index')
+        users.splice(index, 1);
+        setLS('data', users);
+        templateBuilder(users);
     }
 });
 

@@ -97,6 +97,12 @@ td {
 .search-field .users-table tr a.url {
   font-size: 20px;
 }
+.search-field .users-table tr .delete-element {
+  cursor: pointer;
+  background: none;
+  border: 1px solid #c2c2c285;
+  border-radius: 7px;
+}
 .search-field .users-table tr span {
   font-size: 25px;
   cursor: default;
