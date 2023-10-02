@@ -88,10 +88,16 @@ h1, h2, h3, h4, h5, h6, ol, ul, li, a, p, tr, td{
             }
             .delete-element{
                 cursor: pointer;
-                background: none;
+                background: #ffffff;
                 border: 1px solid #c2c2c285;
                 border-radius: 7px;
-                
+                transition: .2s;
+                &:hover{
+                    border: 1px solid #000000;
+                    background-color: #000000;
+                    color: #ffffff;
+                    transition: .2s;
+                }
             }
             span{
                 font-size: 25px;

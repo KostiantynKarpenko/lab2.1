@@ -14,11 +14,7 @@ function getLS(key) {
     return JSON.parse(localStorage.getItem(key));
 }
 
-if(!!getLS('data')) {
-    users = getLS('data');
-    templateBuilder(users);
-}
-else{
+if (!getLS('data') || getLS('data').length == 0){
     fetch(API)
     .then((response) => {
         return response.json();
@@ -28,6 +24,10 @@ else{
         setLS('data', users)
         templateBuilder(users);
     });
+}
+else{
+    users = getLS('data');
+    templateBuilder(users);
 }
 
 function filterController(query) {
@@ -62,7 +62,7 @@ window.addEventListener('click', (e) =>{
         filterController(target)
     }
     if (e.target.classList.contains('delete-element')) {
-        let index = e.target.getAttribute('element-index')
+        let index = e.target.getAttribute('element-index');
         users.splice(index, 1);
         setLS('data', users);
         templateBuilder(users);

@@ -99,9 +99,16 @@ td {
 }
 .search-field .users-table tr .delete-element {
   cursor: pointer;
-  background: none;
+  background: #ffffff;
   border: 1px solid #c2c2c285;
   border-radius: 7px;
+  transition: 0.2s;
+}
+.search-field .users-table tr .delete-element:hover {
+  border: 1px solid #000000;
+  background-color: #000000;
+  color: #ffffff;
+  transition: 0.2s;
 }
 .search-field .users-table tr span {
   font-size: 25px;
